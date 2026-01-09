@@ -16,7 +16,6 @@ public class AIP2TrafficDrone : Agent
 
     public override void Step()
     {
-        Thread.Sleep(1);
         mDrone.Move(0.4f * Mathf.Sin(Time.time * 1.9f), 0.1f);
     }
 }
