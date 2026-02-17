@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.mas.assets": {
-      "version": "file:../../MASUnityAssets",
+      "version": "file:C:/Users/fanbo/Desktop/MAS2026/MASUnityAssets-master/MASUnityAssets-master",
       "depth": 0,
       "source": "local",
       "dependencies": {}
@@ -32,35 +32,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.ads": {
-      "version": "4.16.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.modules.androidjni": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.ai.navigation": {
-      "version": "2.0.9",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.ai": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.analytics": {
-      "version": "3.8.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.services.analytics": "1.0.4"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.collab-proxy": {
       "version": "2.10.2",
       "depth": 0,
@@ -75,7 +46,7 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-      "version": "3.0.38",
+      "version": "3.0.39",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -99,48 +70,6 @@
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
       }
-    },
-    "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.2",
-      "depth": 2,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.purchasing": {
-      "version": "4.14.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.services.core": "1.12.5",
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.services.analytics": {
-      "version": "6.2.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ugui": "1.0.0",
-        "com.unity.services.core": "1.12.4",
-        "com.unity.modules.jsonserialize": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.services.core": {
-      "version": "1.16.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.androidjni": "1.0.0",
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
-        "com.unity.modules.unitywebrequest": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
       "version": "1.6.0",
@@ -172,16 +101,6 @@
         "com.unity.modules.ui": "1.0.0",
         "com.unity.modules.imgui": "1.0.0"
       }
-    },
-    "com.unity.xr.legacyinputhelpers": {
-      "version": "2.1.13",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.modules.vr": "1.0.0",
-        "com.unity.modules.xr": "1.0.0"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.modules.accessibility": {
       "version": "1.0.0",

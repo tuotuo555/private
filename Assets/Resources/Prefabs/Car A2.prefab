@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4214689981708984069, guid: 59697cdff9e8a19489c9afa3022922f6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7191413474682511999, guid: 59697cdff9e8a19489c9afa3022922f6,
         type: 3}
       propertyPath: m_Enabled
@@ -106,14 +111,95 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planningTimeMs: 0
   controllerTimeMs: 0
-  car: {fileID: 7758165578247065602}
-  drawTargets: 0
-  drawAllCars: 0
-  drawTeamCars: 0
-  steering: 0
-  acceleration: 0
-  targetObjects: []
-  teamVehicles: []
+  timeInCollision: 0
+  numberOfCollisions: 0
+  topSpeed: 0
+  distanceTravelled: 0
+  goalOverride: {fileID: 0}
+  goalRefreshPeriod: 0.5
+  goalRefreshDistance: 0.5
+  obstacleQuery: {fileID: 0}
+  obstacleInflateRadius: 0.5
+  obstacleProbes: []
+  autoCreateObstacleQueryIfMissing: 1
+  fallbackObstacleMask:
+    serializedVersion: 2
+    m_Bits: 512
+  fallbackObstacleCheckY: 0.1
+  planner:
+    cellSize: 1
+    thetaBins: 72
+    stepSize: 1.5
+    maxIterations: 5000000
+    maxSteerDeg: 25
+    steerSamples: 5
+    allowReverse: 0
+    wheelBase: 2.6
+    wSteer: 0.08
+    wSteerChange: 0.2
+    wReverse: 1.5
+    hHeadingWeight: 1
+    goalTolerance: 1
+    goalHeadingToleranceDeg: 20
+    requireGoalHeading: 1
+    shotDistance: 6
+    mapPadding: 20
+    minMapCells: 64
+    maxMapCellsPerAxis: 1024
+    obstacleQuery: {fileID: 0}
+    inflateRadius: 1
+    footprintProbes: []
+    outputSpacing: 0.5
+  follower:
+    lookaheadStraight: 8
+    lookaheadCorner: 4.5
+    minLookahead: 2
+    steerClamp: 1
+    steerSmoothing: 0.2
+    wheelBase: 2.6
+    maxSteerDeg: 25
+    cornerLookaheadDistance: 18
+    cornerLowDeg: 8
+    cornerHighDeg: 55
+    vSharp: 3
+    vStraight: 12
+    goalSlowRadius: 8
+    stopDistance: 1
+  speedController:
+    throttleGain: 0.35
+    brakeGain: 0.45
+    maxAccel: 3
+    maxBrake: 6
+  safetyFilter:
+    horizon: 2.5
+    staticRolloutTime: 0.3
+    dSafe: 2.5
+    neighborRadius: 20
+    steerSamples: 5
+    accelSamples: 5
+    steerDelta: 0.25
+    accelDelta: 2
+    wheelBase: 2.6
+    maxSteerDeg: 25
+    maxAccel: 3
+    maxBrake: 6
+    wAccel: 1
+    wSteer: 1
+    wProgress: 0.1
+    wTtcPenalty: 0.7
+    damping: 0.2
+    wSteerHysteresis: 0.15
+    wAccelHysteresis: 0.15
+  replanCooldown: 0.75
+  stuckSpeedThreshold: 0.5
+  tStuck: 2.5
+  blockedAheadDistance: 6
+  blockedNeighborSpeed: 0.3
+  blockedReplanDelay: 1.25
+  collisionHoldTime: 0.35
+  drawPath: 1
+  logPathStatus: 1
+  car: {fileID: 0}
 --- !u!114 &-1240518562638055830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,15 +220,3 @@ MeshRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 135647722828184775}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7758165578247065602 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7659321830340553925, guid: 59697cdff9e8a19489c9afa3022922f6,
-    type: 3}
-  m_PrefabInstance: {fileID: 135647722828184775}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1201008588402055825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ea65b38d485c374caa584a03f1de571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
