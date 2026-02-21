@@ -115,91 +115,81 @@ MonoBehaviour:
   numberOfCollisions: 0
   topSpeed: 0
   distanceTravelled: 0
-  goalOverride: {fileID: 0}
-  goalRefreshPeriod: 0.5
-  goalRefreshDistance: 0.5
-  obstacleQuery: {fileID: 0}
-  obstacleInflateRadius: 0.5
-  obstacleProbes: []
-  autoCreateObstacleQueryIfMissing: 1
-  fallbackObstacleMask:
+  gridCellSize: 1
+  allowDiagonal: 1
+  maxAStarIterations: 2000000
+  obstacleMask:
     serializedVersion: 2
     m_Bits: 512
-  fallbackObstacleCheckY: 0.1
-  planner:
-    cellSize: 1
-    thetaBins: 72
-    stepSize: 1.5
-    maxIterations: 5000000
-    maxSteerDeg: 25
-    steerSamples: 5
-    allowReverse: 0
-    wheelBase: 2.6
-    wSteer: 0.08
-    wSteerChange: 0.2
-    wReverse: 1.5
-    hHeadingWeight: 1
-    goalTolerance: 1
-    goalHeadingToleranceDeg: 20
-    requireGoalHeading: 1
-    shotDistance: 6
-    mapPadding: 20
-    minMapCells: 64
-    maxMapCellsPerAxis: 1024
-    obstacleQuery: {fileID: 0}
-    inflateRadius: 1
-    footprintProbes: []
-    outputSpacing: 0.5
-  follower:
-    lookaheadStraight: 8
-    lookaheadCorner: 4.5
-    minLookahead: 2
-    steerClamp: 1
-    steerSmoothing: 0.2
-    wheelBase: 2.6
-    maxSteerDeg: 25
-    cornerLookaheadDistance: 18
-    cornerLowDeg: 8
-    cornerHighDeg: 55
-    vSharp: 3
-    vStraight: 12
-    goalSlowRadius: 8
-    stopDistance: 1
-  speedController:
-    throttleGain: 0.35
-    brakeGain: 0.45
-    maxAccel: 3
-    maxBrake: 6
-  safetyFilter:
-    horizon: 2.5
-    staticRolloutTime: 0.3
-    dSafe: 2.5
-    neighborRadius: 20
-    steerSamples: 5
-    accelSamples: 5
-    steerDelta: 0.25
-    accelDelta: 2
-    wheelBase: 2.6
-    maxSteerDeg: 25
-    maxAccel: 3
-    maxBrake: 6
-    wAccel: 1
-    wSteer: 1
-    wProgress: 0.1
-    wTtcPenalty: 0.7
-    damping: 0.2
-    wSteerHysteresis: 0.15
-    wAccelHysteresis: 0.15
-  replanCooldown: 0.75
-  stuckSpeedThreshold: 0.5
-  tStuck: 2.5
-  blockedAheadDistance: 6
-  blockedNeighborSpeed: 0.3
-  blockedReplanDelay: 1.25
-  collisionHoldTime: 0.35
-  drawPath: 1
-  logPathStatus: 1
-  car: {fileID: 0}
+  inflateR: 1
+  probeScale: 0.7
+  probeFwd: 1.2
+  probeSide: 0.8
+  checkY: 0.3
+  enableCategoryObstacleInflation: 1
+  obstacleInflationCategories: Buildings
+  categoryInflationRadius: 3
+  enablePurePursuit: 1
+  lookaheadBase: 1
+  lookaheadPerSpeed: 0.5
+  wheelBase: 2.6
+  maxSteerDeg: 35
+  goalStopDistance: 2.2
+  maxSpeed: 8
+  maxAccel: 4
+  maxDecel: 4
+  maxLateralAccel: 5
+  curveSafetyFactor: 0.7
+  speedKp: 0.6
+  throttleRate: 1.5
+  brakeRate: 3
+  testLimitActiveCars: 0
+  testActiveCarCount: 10
+  testActiveCarsSeed: 2026
+  testFreezeInactiveCars: 1
+  releaseOnGoalReached: 1
+  enableReservations: 1
+  reservationDtRes: 0.25
+  reservationRadius: 2.6
+  reservationHorizonSec: 300
+  reservationMaxTotalWaitSec: 180
+  reservationGateTolerance: 0.5
+  reservationDefaultNominalSpeed: 8
+  reservationBatchRelease: 0
+  reservationBatchSize: 4
+  reservationBatchIntervalSec: 10
+  reservationOddThenEvenOrdering: 1
+  reservationEnableMicroStagger: 1
+  reservationMicroStaggerSec: 1
+  reservationForceBuildAfterSec: 1
+  reservationLogReleaseSchedule: 1
+  reservationFollowPlannedTiming: 1
+  reservationPlannedSpeedBlend: 1
+  reservationTimingLagGain: 0.8
+  reservationTimingLagClampSec: 6
+  reservationTimingMaxSpeedAdjust: 4
+  reservationCatchupMaxSpeedFactor: 1.15
+  reservationDebugVerbose: 1
+  reservationDebugIntervalSec: 0.3
+  reservationDebugGateLogs: 0
+  reservationDebugSpeedMatchLogs: 1
+  reservationDebugPlanTraceLogs: 1
+  reservationDebugRealTraceLogs: 1
+  reservationDebugValidatePlannedCollisionFree: 1
+  reservationDebugRealTraceHistoryCount: 20
+  reservationDebugSpeedMismatchAbs: 1.5
+  reservationDebugSpeedMismatchRatio: 0.35
+  reservationDebugLogCollisions: 1
+  reservationDebugWriteToFile: 1
+  reservationDebugEchoConsole: 0
+  reservationDebugClearFileOnStart: 1
+  reservationDebugFileName: SpaceTimeReservationDebug.txt
+  drawRawPath: 0
+  drawSmoothedPath: 1
+  drawLookaheadPoint: 1
+  rawPathColor: {r: 0.9339623, g: 0.8590691, b: 0.8590691, a: 1}
+  smoothedPathColor: {r: 0, g: 1, b: 1, a: 1}
+  lookaheadColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &-1240518562638055830
 MonoBehaviour:
   m_ObjectHideFlags: 0
